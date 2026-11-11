@@ -35,7 +35,7 @@ export const auth = {
     },
 
     async signInWithGoogle() {
-        const redirectTo = window.localStorage.origin + window.location.pathname;
+        const redirectTo = window.location.origin + window.location.pathname;
         const { error } = await supabase.auth.signInWithOAuth({
             provider: 'google',
             options: { redirectTo },
