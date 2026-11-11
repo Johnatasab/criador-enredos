@@ -55,7 +55,7 @@ async function run() {
     for (const guard of guards) {
         const redirect = await guard(path);
         if (redirect && redirect !== path) {
-            location.hash =direct;
+            location.hash = redirect;
             return; //Sai do run() e espera a próxima mudança de hash
         }
     }
