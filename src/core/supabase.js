@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
-import { SUPABASE_URL, SUPABASE_ANON_KEY } from '../config';
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from '../config.js';
 
 if (!SUPABASE_URL || SUPABASE_URL.includes('your-supabase-url')) {
     throw new Error('Configura SUPABASE_URL em src/config.js');

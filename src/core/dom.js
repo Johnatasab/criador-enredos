@@ -10,15 +10,15 @@ export function el(tag, attrs = {}, children = []) {
     const node = document.createElement(tag);
 
     //Aplica os atributos 
-    for (const [key, value] of object.entries(attrs)) {
+    for (const [key, value] of Object.entries(attrs)) {
         if (value == null || value === false) continue; //Ignora valores nulos ou falsos
 
         if (key === 'class' || key === 'className'){
             node.className = value;
         } else if (key === 'dataset') {
-            object.assign(node.dataset, value);
+            Object.assign(node.dataset, value);
         } else if (key === 'style' && typeof value === 'object') {
-            object.assign(node.style, value);
+            Object.assign(node.style, value);
         } else if (key.startsWith('on') && typeof value === 'function') {
             node.addEventListener(key.slice(2).toLowerCase(), value);
         } else if(key === 'html') {

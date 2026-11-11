@@ -42,7 +42,7 @@ function matchPattern(pattern, path) {
 
 function findMatch(path) {
     for (const route of routes) {
-        const params = matchPattern(rout.pattern, path);
+        const params = matchPattern(route.pattern, path);
         if (params) return { route, params };
     }
     return null;
