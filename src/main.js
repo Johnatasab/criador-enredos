@@ -17,7 +17,7 @@ async function boot() {
         const logged = Boolean(auth.current);   //converte o usuário em true(se existe) ou false (null)
         if (!logged && path !== ROUTES.LOGIN) return to.login();    //Não esta logado devolve endereço de login
         if (logged && path === ROUTES.LOGIN) return to.projetos();  //Logado devolve endereço do projeto
-        return 
+        return null;
     });
 
     //3. Registar rotas
